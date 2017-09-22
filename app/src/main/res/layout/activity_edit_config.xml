@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/android_bg_color"
+    android:id="@+id/hideSoft"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:id="@+id/layoutType"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    >
+
+    <TextView
+        android:paddingRight="@dimen/android_width_30"
+        android:paddingLeft="@dimen/android_width_30"
+        android:textSize="@dimen/android_text_size_16"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/android_width_90"
+        android:text="备注信息"
+        android:gravity="center"
+        android:textColor="@color/android_ciyao_text_color"
+        />
+    <TextView
+        style="@style/tv_line"
+        />
+    <com.sanbafule.sharelock.view.editText.ShareLockClearEditText
+        android:paddingRight="@dimen/android_width_30"
+        android:paddingLeft="@dimen/android_width_30"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/android_width_90"
+        android:id="@+id/clear_edittext"
+        android:maxLines="1"
+        android:background="@color/android_bai_color"
+        android:maxLength="10"
+        android:hint="请添加备注"
+        android:textColorHint="@color/android_edit_text_color"
+        android:textSize="@dimen/android_text_size_14"
+        />
+    <TextView
+        style="@style/tv_line"
+        />
+    <TextView
+        android:id="@+id/text_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1/10"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/android_width_20"
+        android:layout_marginTop="@dimen/android_width_10"
+        />
+
+</LinearLayout>
+
+</LinearLayout>

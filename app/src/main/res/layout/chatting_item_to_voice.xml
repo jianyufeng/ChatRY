@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ChattingUIContent"
+    android:layout_below="@+id/chatting_time_tv">
+
+    <include
+        android:id="@+id/chatting_avatar_mask"
+        style="@style/ChattingUIAvatarMaskTo"
+        layout="@layout/chatting_item_avatar_to"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/chatting_user_tv"
+        style="@style/ChattingUISenderText"
+        android:layout_alignTop="@+id/chatting_avatar_mask"
+        android:layout_toLeftOf="@+id/chatting_avatar_mask"
+   />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/chatting_user_tv"
+        android:layout_below="@+id/chatting_user_tv"
+        android:layout_toLeftOf="@+id/chatting_avatar_mask"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/chatting_state_iv"
+            style="@style/ChattingUIState"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_launcher"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/uploading_pb"
+            style="@style/smallCustomProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="8dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/chatting_content_itv"
+            style="@style/ChattingUIVoiceLength"
+            android:text=""
+            android:layout_gravity="center_vertical" />
+
+        <FrameLayout
+            android:id="@+id/chatting_voice_play_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="right">
+
+
+            <TextView
+                android:id="@+id/chatting_voice_play_anim_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/android_width_72"
+                android:background="@drawable/chatto_bg"
+                android:drawableRight="@drawable/chatto_voice_playing"
+                android:minHeight="@dimen/android_width_72" />
+
+            <com.sanbafule.sharelock.chatting.view.CCPAnimImageView
+                android:id="@+id/chatting_voice_anim"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:minHeight="@dimen/android_width_72" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

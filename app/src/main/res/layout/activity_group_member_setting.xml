@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:setts="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/android_width_40"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/no_mb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="该成员已不在本群"
+            android:textColor="@color/red02"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/member_info_contain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.sanbafule.sharelock.view.SingleSettingItem
+                android:id="@+id/member_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                setts:item_showDivider="true"
+                setts:item_showNextPage="false"
+                setts:item_showRightImage="false"
+                setts:item_titleText="@string/group_member_card"
+                />
+
+            <com.sanbafule.sharelock.view.SingleSettingItem
+                android:id="@+id/member_role"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+
+                setts:item_showDivider="true"
+                setts:item_showNextPage="false"
+                setts:item_showRightImage="false"
+                setts:item_titleText="@string/group_member_role"
+                />
+
+            <com.sanbafule.sharelock.view.SingleSettingItem
+                android:id="@+id/member_join_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                setts:item_showDivider="true"
+                setts:item_showNextPage="false"
+                setts:item_showRightImage="false"
+                setts:item_titleText="@string/group_member_join_time"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/show_setting_contain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/android_width_40"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <com.sanbafule.sharelock.view.SingleSettingItem
+                android:id="@+id/member_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                setts:item_switch_visible="true"
+                setts:item_showDivider="true"
+                setts:item_showNextPage="false"
+                setts:item_showRightImage="false"
+                setts:item_titleText="@string/group_member_set_admin"
+                />
+
+            <com.sanbafule.sharelock.view.SingleSettingItem
+                android:id="@+id/member_ban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                setts:item_showDivider="true"
+                setts:item_showNextPage="true"
+                setts:item_showRightImage="false"
+                setts:item_titleText="@string/group_member_setting_ban"
+                />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/group_dissolve"
+            style="@style/common_btn"
+            android:layout_marginTop="@dimen/android_width_40"
+            android:background="@drawable/btn_style_delete_select"
+            android:text="@string/group_dissolve"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/member_remove"
+            style="@style/common_btn"
+            android:layout_marginTop="@dimen/android_width_40"
+            android:background="@drawable/btn_style_delete_select"
+            android:text="@string/group_member_remove"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/group_quit"
+            style="@style/common_btn"
+            android:layout_marginTop="@dimen/android_width_40"
+            android:background="@drawable/btn_style_delete_select"
+            android:text="@string/group_quit"
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+</ScrollView>

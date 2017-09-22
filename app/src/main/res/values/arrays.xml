@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="dialog_list_item">
+        <item>保存到手机</item>
+    </string-array>
+    <string-array name="select_pic">
+        <item>拍照</item>
+        <item>从相册选择</item>
+        <item>使用默认图像</item>
+        <item>取消</item>
+    </string-array>
+    <string-array name="member_ban">
+        <item>10分钟</item>
+        <item>1小时</item>
+        <item>5小时</item>
+        <item>12小时</item>
+        <item>1天</item>
+    </string-array>
+    <!--//群组权限 0-默认直接加入 1-需要身份验证 2-私有群 默认（0）-->
+    <string-array name="group_permissions">
+        <item>直接加入</item>
+        <item>管理员审核</item>
+        <item>私有群</item>
+    </string-array>
+    <!--群组清除聊天记录-->
+    <string-array name="clear_msg">
+        <item>清空聊天记录</item>
+        <item>取消</item>
+    </string-array>
+    <!--文本消息的长按-->
+    <string-array name="receive_text_long_click">
+        <item>复制</item>
+        <item>发送给朋友</item>
+        <item>收藏</item>
+        <item>删除</item>
+        <item>更多</item>
+    </string-array>
+    <string-array name="send_text_long_click">
+        <item>复制</item>
+        <item>发送给朋友</item>
+        <item>收藏</item>
+        <item>撤回</item>
+        <item>删除</item>
+        <item>更多</item>
+    </string-array>
+    <string-array name="send_image_long_click_show_transpond">
+        <item>发送给朋友</item>
+        <item>收藏</item>
+        <item>撤回</item>
+        <item>删除</item>
+        <item>更多</item>
+    </string-array>
+    <string-array name="send_image_long_click">
+        <item>收藏</item>
+        <item>撤回</item>
+        <item>删除</item>
+        <item>更多</item>
+    </string-array>
+    <string-array name="receive_image_long_click_show_transpond">
+        <item>发送给朋友</item>
+        <item>收藏</item>
+        <item>删除</item>
+        <item>更多</item>
+    </string-array>
+    <string-array name="receive_image_long_click">
+        <item>收藏</item>
+        <item>删除</item>
+        <item>更多</item>
+    </string-array>
+    <string-array name="send_file_long_click">
+        <item>发送给朋友</item>
+        <item>收藏</item>
+        <item>撤回</item>
+        <item>删除</item>
+        <item>更多</item>
+    </string-array>
+    <string-array name="receive_file_long_click">
+        <item>发送给朋友</item>
+        <item>收藏</item>
+        <item>删除</item>
+        <item>更多</item>
+    </string-array>
+    <string-array name="send_voice_long_click_01">
+        <item>使用听筒模式</item>
+        <item>收藏</item>
+        <item>撤回</item>
+        <item>删除</item>
+        <item>更多</item>
+    </string-array>
+    <string-array name="send_voice_long_click_02">
+        <item>使用扬声器模式</item>
+        <item>收藏</item>
+        <item>撤回</item>
+        <item>删除</item>
+        <item>更多</item>
+    </string-array>
+    <string-array name="receive_voice_long_click_01">
+        <item>使用听筒模式</item>
+        <item>收藏</item>
+        <item>删除</item>
+        <item>更多</item>
+    </string-array>
+    <string-array name="receive_voice_long_click_02">
+        <item>使用扬声器模式</item>
+        <item>收藏</item>
+        <item>删除</item>
+        <item>更多</item>
+    </string-array>
+</resources>

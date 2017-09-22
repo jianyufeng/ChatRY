@@ -1,0 +1,286 @@
+<resources>
+    <string name="app_name">三八妇乐</string>
+
+    <string name="register_name_digits">._0123456789abcdefghijklm
+        nopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ
+    </string>
+    <string name="title_activity_multi_item_list_view">MultiItemListViewActivity</string>
+    <string name="title_activity_recycler_view">RecyclerViewActivity</string>
+    <string name="title_activity_multi_item_rv">MultiItemRvActivity</string>
+    <string name="title_activity_rv_width_header">RvWidthHeaderActivity</string>
+
+    <string name="fmt_time_length">%d\"</string>
+
+    <string name="app_panel_pic">图片</string>
+    <string name="app_panel_vedio">视频</string>
+    <string name="app_panel_file">文件</string>
+    <string name="app_panel_location">位置</string>
+    <string name="app_panel_card">名片</string>
+    <string name="app_panel_read_after_fire">阅后即焚</string>
+    <string name="avatar_desc">头像</string>
+    <string name="str_recorder_normal">按住说话</string>
+    <string name="str_recorder_recording">手指上滑，取消发送</string>
+    <string name="str_recorder_want_cancel">松开手指，取消发送</string>
+    <string name="str_recorder_too_short">录音时间过短</string>
+    <string name="friend">好友</string>
+    <string name="group">群组</string>
+    <string name="addfriend">添加好友</string>
+    <string name="delete_friend">删除好友</string>
+    <string name="search">搜索</string>
+    <string name="conv_msg_sending">发送中</string>
+    <string name="conv_msg_failed">发送失败</string>
+    <string name="conv_msg_success">"发送成功"</string>
+    <string name="leida">雷达加朋友</string>
+    <string name="mianduimian">面对面建群</string>
+    <string name="saoyisao">扫一扫</string>
+    <string name="net">网络连接失败，请检查网络设置</string>
+    <string name="address">地区</string>
+    <string name="signature">个性签名</string>
+    <string name="sendmessage">发消息</string>
+    <string name="addfriendmessage">添加您为好友</string>
+    <string name="nvite">邀请您成为他的好友</string>
+    <string name="agree">同意</string>
+    <string name="agreed">已同意</string>
+    <string name="fmt_route_phone">已切换为听筒模式</string>
+    <string name="fmt_route_speaker">已切换为扬声器模式</string>
+
+    <string name="my_info">我的信息</string>
+
+    <string name="reject">拒绝</string>
+    <string name="rejected">已拒绝</string>
+    <string name="newfirend">新的朋友</string>
+    <string name="agreemessage">已同意添加您为好友</string>
+    <string name="disagreemessage">拒绝了您的好友请求</string>
+    <string name="set_remark">设置备注</string>
+    <string name="contactinfo">好友详情</string>
+    <string name="contactinfomore">资料设置</string>
+    <string name="please_wait">正在加载，请稍后...</string>
+    <string name="hint">提示</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="dispose">正在处理您的好友请求</string>
+    <string name="newfriend_text">新的朋友</string>
+    <string name="group_chat">群聊</string>
+    <string name="custom_service">客服</string>
+    <string name="save_img_waite_download">请稍候，图片正在加载中</string>
+    <string name="viewpager_indicator" formatted="false">%d/%d</string>
+    <string name="sign">个性签名</string>
+    <string name="commentName">备注信息</string>
+    <!--dialog-->
+    <string name="dialog_hint_title">提示</string>
+    <string name="clean_message_hint">确定删除和%s的聊天记录吗?</string>
+    <string name="positive">确定</string>
+    <string name="negative">取消</string>
+    <string name="clean">清空</string>
+
+
+    <!--contactInfo_more-->
+    <string name="blacklist">设置黑名单</string>
+    <string name="nodisturb">消息免打扰</string>
+    <string name="cleanmessage">清空聊天记录</string>
+
+    <string name="login_again">登录超时，请重新尝试</string>
+    <string name="more">更多</string>
+    <string name="complete">完成</string>
+    <!--群组列表-->
+    <string name="group_number">%s个群组</string>
+    <string name="group_list_title">群组</string>
+    <string name="group_list_search_edit_title">搜索群组</string>
+    <string name="group_list_search_edit_hint">请输入群组id或群组名称</string>
+    <string name="group_list_create_group">创建群组</string>
+
+    <!--创建群组-->
+    <string name="create_group_inout_name">请输入群组名称</string>
+    <string name="create_group_confirm">提交</string>
+    <string name="create_group_edit">编辑群资料</string>
+    <string name="upload_picture_err">上传图像失败</string>
+    <string name="group_pic_tip">请上传群组图像</string>
+    <string name="group_name_tip">请输入群组名称</string>
+    <string name="create_group_fail">创建群组失败</string>
+    <string name="open_camera_err">相机打开失败</string>
+    <string name="get_pic_err">获取图片失败</string>
+    <string name="group_name_format_err">群组名称格式不正确</string>
+    <string name="not_change">请修改后提交</string>
+    <string name="change_fail">修改失败</string>
+    <string name="dismiss_group_fail">操作失败</string>
+    <string name="dismiss_group_success">操作成功</string>
+    <string name="create_group_rule">我已阅读并同意</string>
+    <string name="create_group_rule_">服务声明</string>
+    <string name="create_group_rule_tip">请勾选服务声明</string>
+    <!--群组详情-->
+    <string name="group_role_admin">管理员</string>
+    <string name="group_details_title">群组详情</string>
+    <string name="group_icon">群组头像</string>
+    <string name="group_name">群组名称</string>
+    <string name="group_member_count">群成员</string>
+    <string name="group_member_count_">%s人</string>
+    <string name="group_declare">群组公告</string>
+    <string name="group_permission">加入权限</string>
+    <string name="group_msg_notice">消息免打扰</string>
+    <string name="group_clear_msg">清空聊天记录</string>
+    <string name="group_dissolve">解散群组</string>
+    <string name="group_quit">退出群组</string>
+    <string name="group_details_get_err">获取详情失败</string>
+    <string name="edit_group_title">修改%s</string>
+    <string name="edit_group_tip">%s不能为空</string>
+    <string name="group_dis_tip">[ %1$s ]解散了群组 %2$s </string>
+    <!--群组成员详情-->
+    <string name="group_member_title">用户详情</string>
+    <string name="group_member_setting">更多</string>
+    <string name="group_member_label">设置备注及标签</string>
+    <string name="group_member_location">地区</string>
+    <string name="group_member_sign">个性签名</string>
+    <string name="group_member_chat">发起会话</string>
+    <!--群组成员设置-->
+    <string name="group_member_set_admin">设为管理员</string>
+    <string name="group_admin_set_success">管理员设置成功</string>
+    <string name="group_admin_set_fail">管理员设置失败</string>
+    <string name="group_admin_cancel_success">管理员取消成功</string>
+    <string name="group_admin_cancel_fail">管理员取消失败</string>
+    <string name="group_member_setting_ban">设置禁言</string>
+    <string name="group_member_remove">移除本群</string>
+    <string name="group_member_card">群名片</string>
+    <string name="group_member_role">成员头衔</string>
+    <string name="group_member_join_time">入群时间</string>
+    <!--群组成员设置禁言时间-->
+    <string name="group_member_setting_ban_time">设置禁言</string>
+    <string name="group_member_cancel_ban">解除禁言</string>
+    <string name="group_member_setting_ban_confirm">确定</string>
+    <string name="group_member_ban_time">禁言时长</string>
+    <string name="group_member_ban_tip">选择禁言时长</string>
+    <string name="group_member_ban_success">禁言成功</string>
+    <string name="group_member_ban_fail">禁言失败</string>
+    <string name="group_member_cancel_ban_success">解除禁言禁言成功</string>
+    <string name="group_member_cancel_ban_fail">解除禁言失败</string>
+    <string name="group_member_kick">你被踢出群组[%s]</string>
+
+    <!--选择联系人界面-->
+    <string name="select_friends_title">选择联系人</string>
+    <string name="select_friends_confirm">确认</string>
+    <string name="invite_success_tip">邀请成功，等待对方同意</string>
+    <string name="invite_fail_tip">邀请失败</string>
+    <!--请求加入群组的界面-->
+    <string name="request_join_title">群组申请</string>
+    <string name="request_join_g_name">申请加入群组: %s</string>
+    <string name="request_join_g_name_my">你申请加入群组: %s</string>
+    <string name="request_join_waiting">待处理</string>
+    <string name="request_result_agree">同意让你加群，处理人: %s</string>
+    <string name="request_result_reject">拒绝让你加群，处理人: %s</string>
+    <!--申请加入群组详情界面-->
+    <string name="apply_join_group">申请加群</string>
+    <string name="group_create_time_format">yyyy年MM月dd日</string>
+    <string name="group_create_time">创建时间</string>
+    <string name="apply_success">申请成功</string>
+    <string name="apply_fail">申请失败</string>
+    <string name="group_belong">群主</string>
+    <string name="group_qrcode">群组二维码</string>
+
+    <!--邀请加入群组的界面-->
+    <string name="invite_join_title">群组邀请</string>
+    <string name="invite_join_g_name">邀请你加入群组 %s</string>
+    <string name="invite_result_agree">同意加入群组 %s</string>
+    <string name="invite_result_reject">拒绝加入群组 %s</string>
+    <string name="invite_join_g_name_my">你邀请 %1$s 加入群组 %2$s</string>
+    <string name="invite_result_agree_my">%1$s 同意了你的加入群组 %2$s 的申请</string>
+    <string name="invite_result_reject_my">%1$s 拒绝了你的加入群组 %2$s 的申请</string>
+    <!--搜索好友及群组界面-->
+    <string name="search_friend_hint">请输入联系人账号</string>
+    <string name="search_group_hint">请输入群组名称</string>
+    <string name="search_empty">输入不能为空</string>
+    <!--群组通知-->
+    <string name="group_notice_title">群组通知</string>
+    <string name="link_err">服务器连接异常</string>
+    <!--修改个人信息-->
+    <string name="change_user_title">个人信息</string>
+    <string name="change_user_name">名称</string>
+    <string name="change_user_account">账号</string>
+    <string name="change_user_qrcode">我的二维码</string>
+    <string name="change_user_password">修改密码</string>
+    <string name="change_user_sign">个性签名</string>
+    <!--修改个性签名界面-->
+    <string name="change_user_sign_title">修改个性签名</string>
+
+    <!--修改密码-->
+    <string name="reset_password">修改密码</string>
+    <string name="un_input_pass">您还未输入旧密码</string>
+    <string name="length_err">密码长度不正确</string>
+    <string name="format_err">密码格式不正确，请使用字母、数字及下划线组合</string>
+    <string name="password_err">密码错误，请重试</string>
+    <string name="new_pass">新密码</string>
+    <string name="input_pass">请输入新密码</string>
+    <string name="un_repeat_pass">请确认新密码</string>
+    <string name="repeat_pass_err">密码不一致，请重新确认</string>
+    <string name="reset_err">密码修改失败，请重试</string>
+    <!--二维码界面-->
+    <string name="qrcode_add">扫描二维码，加我为好友</string>
+    <string name="qrcode_user_member">会员</string>
+    <string name="qrcode_user_employees">职工</string>
+    <string name="qrcode_user_sex_hidden">保密</string>
+    <string name="qrcode_user_sex_male">男</string>
+    <string name="qrcode_user_sex_female">女</string>
+
+    <!--二维码扫描界面-->
+    <string name="scan_text">将二维码/条码放入框内,即可自动扫描</string>
+    <string name="scan_qrcode">将二维码放入框内 即可自动扫描</string>
+    <string name="scan_qrcode_f">仅限添加好友</string>
+    <string name="scan_onecode">将条形码放入框内 即可自动扫描</string>
+    <string name="scan_onecode_p">仅限产品条码</string>
+    <string name="scan_qr">二维码</string>
+    <string name="scan_one">条形码</string>
+    <!--通知-->
+    <string name="app_pic">[图片]</string>
+    <string name="app_music">[音乐]</string>
+    <string name="app_voice">[语音]</string>
+    <string name="app_video">[视频]</string>
+    <string name="app_file">[文件]</string>
+    <string name="app_face">[表情]</string>
+    <string name="app_location">[位置]</string>
+    <string name="notification_fmt_one_txtType">%s发来1条消息</string>
+    <string name="notification_fmt_one_imgType">%s发来1张图片</string>
+    <string name="notification_fmt_one_voiceType">%s发来1段语音</string>
+    <string name="notification_fmt_one_fileType">%s发来1个文件</string>
+    <string name="notification_fmt_one_locationType">%s发来位置</string>
+    <string name="notification_fmt_one_GifType">%s发来1个表情</string>
+    <string name="notification_fmt_one_VideoType">%s发来1段视频</string>
+    <string name="str_system_message_group_notice">群组通知</string>
+    <string name="agree_friend_request">[ %s ]已同意添加你为好友</string>
+    <string name="reject_friend_request">[ %s ]拒绝了你的好友申请</string>
+    <string name="add_friend_request">[ %s ] 请求添加你为好友</string>
+    <string name="invite_join_group">[ %1$s ]邀请你加入群组 %2$s</string>
+    <string name="invite_join_group_reply_a">[ %1$s ]同意你的加入群组邀请 :%2$s</string>
+    <string name="invite_join_group_reply_d">[ %1$s ]拒绝了你的加入群组邀请 :%2$s</string>
+    <string name="apply_join_group_reply_a">[ %1$s ]同意你加入群组 %2$s</string>
+    <string name="apply_join_group_reply_d">[ %1$s ]拒绝你加入群组 %2$s</string>
+    <string name="apply_join_group_">[%1$s]申请加入群组 %2$s</string>
+    <string name="group_manage_operate">群管理操作</string>
+    <string name="group_about_info_notice">群相关信息通知</string>
+    <string name="group_operate_notice">群组操作通知</string>
+    <string name="friend_operate_notice">好友操作通知</string>
+    <string name="friend_del_msg">[%s]与你解除了好友关系</string>
+    <string name="add_friend">添加请求</string>
+    <string name="add_who_friend">你添加[%s]为好友</string>
+    <string name="add_me_friend">添加你为好友</string>
+    <string name="add_friend_r_rejected">拒绝了你的好友申请</string>
+    <string name="add_friend_r_agreed">同意了你的好友申请</string>
+
+    <!--会话状态的处理-->
+    <string name="top_conversion">置顶</string>
+    <string name="cancel_top_conversion">取消置顶</string>
+    <string name="set_un_read">标为未读</string>
+    <string name="set_read">标为已读</string>
+    <string name="del_conversion">删除</string>
+
+    <!--权限相关-->
+    <string name="go_setting">去设置</string>
+    <!--网络连接状态-->
+    <string name="connect_server_error">无法连接到服务器</string>
+    <string name="connecting_server">正在连接服务器...</string>
+    <string name="net_not_use">网络不可用</string>
+    <!--群组@界面-->
+    <string name="room_at_someone">选择回复的人</string>
+    <string name="someone_at_me">[有人@我]</string>
+    <string name="at_all">全体成员</string>
+    <string name="black_list_tip">你已经被对方加入到了黑名单！</string>
+    <string name="group_ban_tip">你已经被群管理员禁言！</string>
+
+</resources>

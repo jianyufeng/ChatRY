@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.sanbafule.sharelock.view.customRecycleView.ExpandRecyclerView
+        android:layout_marginTop="@dimen/android_width_40"
+        android:id="@+id/group_permission_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2dp"
+        />
+</LinearLayout>

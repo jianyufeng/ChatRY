@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#f8f8f8"
+              android:orientation="vertical"
+              android:id="@+id/hideSoft"
+              android:paddingTop="@dimen/android_width_40">
+    <TextView
+        style="@style/tv_line"/>
+    <EditText
+        android:gravity="left"
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/android_width_250"
+        android:padding="@dimen/android_width_30"
+        android:lines="5"
+        android:hint="请输入您的签名内容"
+        android:textSize="@dimen/android_text_size_16"
+        android:textColorHint="@color/android_edit_text_color"
+        android:background="@color/android_bai_color"
+        />
+    <TextView
+        style="@style/tv_line"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_marginTop="@dimen/android_width_10"
+            android:layout_marginRight="@dimen/android_width_20"
+            android:layout_alignParentRight="true"
+            android:text="1/30"
+            android:textSize="@dimen/android_text_size_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

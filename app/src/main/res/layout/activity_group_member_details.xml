@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:setts="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.sanbafule.sharelock.view.DatailSettingItem
+        android:id="@+id/member_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/android_width_40"
+        setts:item_LevelString="等级"
+        setts:item_ManagerString="管理"
+        setts:item_showDividerFlag="false"
+        setts:item_showLabel="false"
+        setts:item_showLevel="true"
+        setts:item_showManager="true"
+        setts:item_showNextPageFlag="false"
+        setts:item_showQrcode="false"/>
+
+    <com.sanbafule.sharelock.view.SingleSettingItem
+        android:id="@+id/group_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/android_width_40"
+        setts:item_showDivider="true"
+        setts:item_showNextPage="false"
+        setts:item_showRightImage="false"
+        setts:item_titleText="@string/group_member_location"
+        />
+
+    <com.sanbafule.sharelock.view.SingleSettingItem
+        android:id="@+id/group_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        setts:item_showDivider="true"
+        setts:item_showNextPage="true"
+        setts:item_showRightImage="false"
+        setts:item_titleText="@string/group_member_sign"
+        />
+
+    <Button
+        android:id="@+id/member_chat"
+        style="@style/common_btn"
+        android:layout_marginTop="@dimen/android_width_40"
+        android:background="@drawable/btn_style_red_select"
+        android:elevation="@dimen/android_width_10"
+        android:text="@string/group_member_chat"
+        android:visibility="gone"
+        />
+
+    <Button
+        android:id="@+id/add_friend"
+        style="@style/common_btn"
+        android:layout_marginTop="@dimen/android_width_40"
+        android:background="@drawable/btn_style_red_select"
+        android:elevation="@dimen/android_width_10"
+        android:text="@string/addfriend"
+        android:visibility="gone"
+        />
+
+
+</LinearLayout>

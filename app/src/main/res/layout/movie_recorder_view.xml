@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <SurfaceView
+        android:id="@+id/surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <!--<ProgressBar-->
+    <!--android:progress="0"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:id="@+id/progressBar"-->
+    <!--style="?android:attr/progressBarStyleLargeInverse"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/android_width_40"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:textColor="@color/android_bai_color"
+            android:text="取消"
+            android:visibility="gone"
+            android:layout_margin="@dimen/android_width_40"
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#5af00000"/>
+
+
+        <com.sanbafule.sharelock.chatting.view.RoundProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/android_width_178"
+            android:layout_height="@dimen/android_width_178"
+            android_custom:roundColor="@color/android_bai_color"
+            android_custom:roundProgressColor="@color/main_color"
+            android_custom:roundWidth="@dimen/android_width_10"
+            android_custom:textColor="@color/main_color"
+            android_custom:textIsDisplayable="false"
+            android_custom:textSize="18sp"/>
+
+        <Button
+            android:textColor="@color/android_bai_color"
+            android:text="发送"
+            android:visibility="gone"
+            android:layout_margin="@dimen/android_width_40"
+            android:id="@+id/send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#5af00000"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--图片的接受消息-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ChattingUIContent"
+    android:layout_marginTop="10dp"
+    >
+
+    <include layout="@layout/chatting_item_avatar_from" />
+
+    <LinearLayout
+        android:id="@+id/uploading_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/chatting_user_tv"
+            style="@style/ChattingUISenderText"
+           />
+
+        <FrameLayout
+            android:id="@+id/chatting_click_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+          >
+
+            <ImageView
+                android:id="@+id/chatting_content_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:maxWidth="200.0dip"
+                android:maxHeight="230.0dip"/>
+            <ImageView
+                android:id="@+id/img_gif"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_play_gif"
+                android:visibility="gone"
+            />
+
+            <ImageView
+                android:id="@+id/chatting_content_mask_iv"
+                android:layout_width="0.0dip"
+                android:layout_height="0.0dip" />
+
+            <ProgressBar
+                android:id="@+id/downloading_pb"
+                style="@style/smallCustomProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0EFF5">
+
+    <TextView
+        android:id="@+id/line1"
+        style="@style/tv_line"
+        android:layout_marginTop="30dp" />
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        style="@style/Base_Horizontal_LinearLayout"
+        android:layout_below="@+id/line1"
+        android:background="@color/white"
+        android:padding="10dp">
+
+
+        <ImageView
+            android:id="@+id/contact_heard"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/g"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="-10dp"
+            android:visibility="gone"
+            android:layout_toRightOf="@+id/contact_heard"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/contact_nickname"
+            style="@style/Base_TextView"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/contact_heard"
+            android:text="dsfafjh" />
+
+        <TextView
+            android:id="@+id/contact_username"
+            style="@style/Base_TextView"
+            android:layout_alignLeft="@+id/contact_nickname"
+            android:layout_below="@+id/contact_nickname"
+            android:layout_marginTop="10dp"
+            android:text="sdfaf" />
+
+        <ImageView
+            android:id="@+id/lv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/contact_nickname"
+            android:src="@drawable/ic_launcher"
+
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/line2"
+        style="@style/tv_line"
+        android:layout_below="@+id/layout1" />
+
+
+    <TextView
+        android:id="@+id/line5"
+        style="@style/tv_line"
+        android:layout_below="@+id/line2"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        style="@style/Base_Horizontal_LinearLayout"
+        android:layout_below="@+id/line5"
+        android:background="@color/white"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/layout4"
+            style="@style/Base_Horizontal_LinearLayout"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/Base_TextView_Black"
+                android:text="@string/address" />
+
+            <View style="@style/tv_h" />
+
+            <TextView
+                android:id="@+id/address"
+                style="@style/Base_TextView"
+                android:layout_gravity="right"
+                android:layout_marginRight="12dp"
+                android:maxLines="1"
+                android:text="@string/address" />
+        </LinearLayout>
+
+        <TextView style="@style/tv_line" />
+
+        <LinearLayout
+            android:id="@+id/layout5"
+            style="@style/Base_Horizontal_LinearLayout"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/Base_TextView_Black"
+                android:layout_gravity="center_vertical"
+                android:text="@string/signature" />
+
+            <TextView style="@style/tv_h" />
+
+            <TextView
+                android:id="@+id/signature"
+                style="@style/Base_TextView"
+                android:layout_gravity="right"
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="12dp"
+                android:minHeight="40dp"
+                android:gravity="left"
+                android:maxLength="30"
+                android:text="" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/line6"
+        style="@style/tv_line"
+        android:layout_below="@+id/layout3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_style_red_select"
+        android:text="@string/addfriend"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

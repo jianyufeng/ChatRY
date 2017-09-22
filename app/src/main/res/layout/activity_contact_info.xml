@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:setts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.sanbafule.sharelock.view.DatailSettingItem
+        android:id="@+id/contact_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/android_width_40"
+        setts:item_LabelString=""
+        setts:item_LevelString=""
+        setts:item_ManagerString=""
+        setts:item_rightTextString=""
+        setts:item_thirdString=""
+        setts:item_showDividerFlag="false"
+        setts:item_showLabel="true"
+        setts:item_showLevel="true"
+        setts:item_showManager="true"
+        setts:item_showNextPageFlag="true"
+        setts:item_showQrcode="true"/>
+
+<View
+    style="@style/tv_line"
+    android:layout_marginTop="@dimen/android_width_40"
+    />
+    <com.sanbafule.sharelock.view.SingleSettingItem
+        android:id="@+id/contact_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        setts:item_showDivider="true"
+        setts:item_showNextPage="true"
+        setts:item_showRightImage="false"
+        setts:item_titleText="@string/group_member_label"
+        />
+    <View
+        style="@style/tv_line"
+        android:layout_marginTop="@dimen/android_width_40"
+        />
+    <com.sanbafule.sharelock.view.SingleSettingItem
+        android:id="@+id/contact_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        setts:item_rightText="西安"
+        setts:item_showDivider="true"
+        setts:item_showNextPage="false"
+        setts:item_showRightImage="false"
+        setts:item_titleText="@string/group_member_location"
+        />
+
+    <com.sanbafule.sharelock.view.SingleSettingItem
+        android:id="@+id/contact_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        setts:item_rightText=""
+        setts:item_showDivider="true"
+        setts:item_showNextPage="true"
+        setts:item_showRightImage="false"
+        setts:item_titleText="@string/group_member_sign"
+        />
+
+    <Button
+        android:id="@+id/btn_send"
+        style="@style/common_btn"
+        android:layout_marginTop="@dimen/android_width_40"
+        android:background="@drawable/btn_style_red_select"
+        android:text="@string/sendmessage"
+        android:elevation="0dp"
+        />
+
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@android:drawable/screen_background_dark_transparent">
+
+    <LinearLayout
+        android:background="@android:color/transparent"
+        android:padding="10dp"
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        >
+        <com.sanbafule.sharelock.view.customRecycleView.ExpandRecyclerView
+            android:id="@+id/comm_popup_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="2dp"
+            />
+    </LinearLayout>
+</RelativeLayout>

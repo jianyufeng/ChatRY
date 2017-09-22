@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:minHeight="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/android_width_20"
+        android:text="@string/group_member_ban_tip"/>
+
+    <com.sanbafule.sharelock.view.customRecycleView.ExpandRecyclerView
+        android:id="@+id/times"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"/>
+
+    <Button
+        android:id="@+id/member_ban_confirm"
+        style="@style/common_btn"
+        android:layout_marginTop="@dimen/android_width_40"
+        android:background="@drawable/btn_style_delete_select"
+        android:text="@string/group_member_setting_ban_confirm"
+        />
+</LinearLayout>

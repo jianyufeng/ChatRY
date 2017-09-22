@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/android_width_18"
+        android:layout_marginRight="@dimen/android_width_18"
+        android:layout_marginTop="@dimen/android_width_18">
+
+        <com.sanbafule.sharelock.view.customRecycleView.ExpandRecyclerView
+            android:id="@+id/select_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/android_search"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/select_listview"
+            android:visibility="gone"
+            />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:hint="@string/search"
+            android:textColorHint="@color/main_color"
+            android:layout_marginLeft="3dp"
+            android:textSize="14sp"
+            android:layout_alignLeft="@+id/image"
+            android:layout_below="@+id/select_listview"
+            />
+
+    </RelativeLayout>
+
+    <View
+        style="@style/tv_line"
+        android:background="@color/main_color" />
+    <com.sanbafule.sharelock.view.customRecycleView.ExpandRecyclerView
+        android:id="@+id/transpondList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

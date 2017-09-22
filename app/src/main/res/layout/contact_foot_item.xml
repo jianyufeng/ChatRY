@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:background="#eee"
+                android:layout_height="48dp"
+                android:padding="@dimen/android_width_20"
+    >
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        tools:text="共有3位好友"
+        android:background="@null"
+        android:layout_centerInParent="true"
+        />
+</RelativeLayout>

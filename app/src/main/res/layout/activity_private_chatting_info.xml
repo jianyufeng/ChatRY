@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:setts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_activity_background"
+        android:orientation="vertical">
+
+        <com.sanbafule.sharelock.view.DatailSettingItem
+            android:id="@+id/contact_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/android_width_40"
+            setts:item_showDividerFlag="false"
+            setts:item_showLabel="false"
+            setts:item_showLevel="false"
+            setts:item_showManager="false"
+            setts:item_showNextPageFlag="true"
+            setts:item_showQrcode="false" />
+
+        <LinearLayout
+            style="@style/Base_Vertical_LinearLayout"
+            android:layout_marginTop="20dp"
+            android:background="@color/main_item_background">
+
+            <LinearLayout
+                android:id="@+id/chatting_top"
+                style="@style/Base_Horizontal_LinearLayout"
+                android:padding="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="置顶聊天" />
+
+                <View style="@style/tv_h" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/chatting_top_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                style="@style/tv_line"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin" />
+
+            <LinearLayout
+                android:id="@+id/chatting_disturb"
+                style="@style/Base_Horizontal_LinearLayout"
+                android:padding="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="消息免打扰" />
+
+                <View style="@style/tv_h" />
+
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/chatting_disturb_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <View
+                style="@style/tv_line"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin" />
+
+            <LinearLayout
+                android:id="@+id/chatting_file"
+                style="@style/Base_Horizontal_LinearLayout"
+                android:padding="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="聊天文件" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/chatting_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/main_item_background"
+            android:padding="@dimen/activity_vertical_margin"
+            android:text="设置当前聊天背景" />
+
+        <View
+            style="@style/tv_line"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:id="@+id/chatting_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_item_background"
+            android:padding="@dimen/activity_vertical_margin"
+            android:text="查找聊天记录" />
+
+        <TextView
+            android:id="@+id/chatting_clean"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/main_item_background"
+            android:padding="@dimen/activity_vertical_margin"
+            android:text="清空聊天记录" />
+
+        <TextView
+            android:id="@+id/chatting_complain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/main_item_background"
+            android:padding="@dimen/activity_vertical_margin"
+            android:text="投诉/举报" />
+
+
+        <LinearLayout
+            android:id="@+id/chatting_blacklist"
+            style="@style/Base_Horizontal_LinearLayout"
+            android:layout_marginTop="20dp"
+            android:background="@color/main_item_background"
+            android:padding="@dimen/activity_vertical_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加入黑名单" />
+
+            <View style="@style/tv_h" />
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/chatting_blacklist_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_delete_friend"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/btn_style_red_select"
+            android:gravity="center"
+            android:text="删除好友"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_marginBottom="50dp"
+            />
+    </LinearLayout>
+
+</ScrollView>

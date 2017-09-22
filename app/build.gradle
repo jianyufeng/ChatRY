@@ -1,0 +1,95 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+    defaultConfig {
+        applicationId "com.sanbafule.sanbafule"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+
+afterEvaluate {
+    tasks.matching {
+        it.name.startsWith('dex')
+    }.each { dx ->
+        def listFile = project.rootDir.absolutePath+'/app/maindexlist.txt'
+        if (dx.additionalParameters == null) {
+            dx.additionalParameters = []
+        }
+        //表示当方法数越界时则生成多个dex文件（我的没有越界，貌似也生成了两个）
+        dx.additionalParameters += '--multi-dex'
+        //这个指定了listFile中的类（即maindexlist.txt中的类）会打包到主dex中，不过注意下一条。
+        dx.additionalParameters += '--main-dex-list=' +listFile
+        //表明只有-main-dex-list所指定的类（在我的配置中，就是app目录下的maindexlist.txt中包含的类）才能打包到主dex中，如果没有这个选项，上个选项就会失效
+        dx.additionalParameters += '--minimal-main-dex'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:support-v4:23.0.1'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:design:23.0.1'
+    compile 'com.android.support:recyclerview-v7:23.0.1'
+    compile project(':reclib-testemoticons')
+    // okhttp
+    compile files('libs/okhttp-3.0.0.jar')
+    compile files('libs/okhttputils-2_3_8.jar')
+    //融云通讯
+    compile files('libs/Rong_IMLib.jar')
+    //拼音
+    compile files('libs/pinyin4j-2.5.0.jar')
+    // 软键盘
+    compile 'com.github.w446108264:XhsEmoticonsKeyboard:2.0.4'
+    // 注解框架
+    compile 'com.jakewharton:butterknife:7.0.1'
+    // 图片显示框架glide
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    // glide框架配合Okhttp
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.4.0@aar'
+    // 表情库
+    compile 'com.github.w446108264:AndroidEmoji:1.0.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    // 图库框架
+    compile 'com.github.glassLake:PhotoPicker:1.0.2'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.zjutkz:PowerfulRecyclerView:1.0.0'
+    //Material Dialogs
+    compile 'com.afollestad.material-dialogs:core:0.9.1.0'
+    compile project(path: ':reclib-qq')
+    compile files('libs/core-2.3.0.jar')
+    compile files('libs/MiPush_SDK_Client_3_2_1.jar')
+    compile project(':InitActivity')
+    //权限框架
+    compile 'pub.devrel:easypermissions:0.1.9'
+
+
+}

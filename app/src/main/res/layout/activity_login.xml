@@ -1,0 +1,124 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/NavPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:orientation="vertical"
+    android:id="@+id/login_layout"
+    android:clickable="true">
+    <ScrollView
+        android:id="@+id/login_sc_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_logo"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="60dp"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/login" />
+
+            <LinearLayout
+                style="@style/login_layout_style"
+                android:layout_marginTop="50dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/android_login_username"
+                    android:scaleType="centerInside"
+                    />
+                <com.sanbafule.sharelock.view.editText.ShareLockClearEditText
+                    android:id="@+id/et_userName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.9"
+                    android:hint="请输入用户名"
+                    android:background="@null"
+                    android:digits="@string/register_name_digits"
+                    android:singleLine="true"
+                    android:textColorHint="#c6c6cd"
+                    android:imeOptions="actionNext"
+                    android:text="zhouliwen22"
+
+                    />
+
+            </LinearLayout>
+            <TextView
+                style="@style/tv_line"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginTop="10dp"
+                />
+
+            <LinearLayout
+                style="@style/login_layout_style"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="0.1"
+                    android:src="@drawable/android_login_password"
+                    android:scaleType="centerInside"
+                    />
+
+                <com.sanbafule.sharelock.view.editText.ShareLockClearEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.9"
+                    android:background="@null"
+                    android:textColorHint="#c6c6cd"
+                    android:digits="@string/register_name_digits"
+                    android:password="true"
+                    android:hint="请输入登录密码"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:text="123456"
+
+                    />
+            </LinearLayout>
+            <TextView
+                style="@style/tv_line"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:layout_marginTop="10dp"
+                />
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_style_red_select"
+                android:gravity="center"
+                android:text="登录"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
+
+
+

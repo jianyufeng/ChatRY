@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sanbafule.sharelock.view.InterceptScrollview
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sets="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/top_layout"
+    android:background="@color/common_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.sanbafule.sharelock.view.customRecycleView.ExpandRecyclerView
+            android:id="@+id/group_members"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/android_width_20"
+            android:layout_marginTop="@dimen/android_width_20"
+            android:overScrollMode="never"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <com.sanbafule.sharelock.view.SingleSettingItem
+                android:id="@+id/group_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                sets:item_showDivider="true"
+                sets:item_showNextPage="false"
+                sets:item_showRightImage="true"
+                sets:item_titleText="@string/group_icon"
+                />
+
+            <com.sanbafule.sharelock.view.SingleSettingItem
+                android:id="@+id/group_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                sets:item_showDivider="true"
+                sets:item_showNextPage="false"
+                sets:item_showRightImage="false"
+                sets:item_titleText="@string/group_name"
+                />
+
+            <com.sanbafule.sharelock.view.SingleSettingItem
+                android:id="@+id/group_declare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                sets:item_showDivider="true"
+                sets:item_showNextPage="false"
+                sets:item_showRightImage="false"
+                sets:item_titleText="@string/group_declare"
+                />
+
+            <com.sanbafule.sharelock.view.SingleSettingItem
+                android:id="@+id/group_permission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                sets:item_showDivider="false"
+                sets:item_showNextPage="false"
+                sets:item_showRightImage="false"
+                sets:item_titleText="@string/group_permission"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/android_width_40"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <com.sanbafule.sharelock.view.SingleSettingItem
+                android:id="@+id/group_msg_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                sets:item_showDivider="true"
+                sets:item_showNextPage="false"
+                sets:item_titleText="@string/group_msg_notice"
+                sets:item_switch_visible="true"
+                />
+
+            <com.sanbafule.sharelock.view.SingleSettingItem
+                android:id="@+id/group_clean_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                sets:item_showDivider="false"
+                sets:item_showNextPage="true"
+                sets:item_showRightImage="false"
+                sets:item_titleText="@string/group_clear_msg"
+                />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/group_dissolve_or_quit"
+            style="@style/common_btn"
+            android:layout_marginTop="@dimen/android_width_40"
+            android:background="@drawable/btn_style_red_select"
+            android:text="@string/group_dissolve"
+
+            />
+    </LinearLayout>
+
+
+</com.sanbafule.sharelock.view.InterceptScrollview>

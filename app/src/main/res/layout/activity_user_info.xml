@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:setts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_activity_background"
+    android:orientation="vertical">
+
+    <com.sanbafule.sharelock.view.DatailSettingItem
+        android:id="@+id/item_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        setts:item_showDividerFlag="false"
+        setts:item_showLabel="false"
+        setts:item_showLevel="true"
+        setts:item_showManager="true"
+        setts:item_showNextPageFlag="true"
+        setts:item_showQrcode="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+
+    <com.sanbafule.sharelock.view.SingleSettingItem
+        android:id="@+id/contact_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        setts:item_rightText="西安"
+        setts:item_showDivider="true"
+        setts:item_showNextPage="false"
+        setts:item_showRightImage="false"
+        setts:item_titleText="@string/group_member_location"
+        />
+
+    <com.sanbafule.sharelock.view.SingleSettingItem
+        android:id="@+id/contact_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        setts:item_rightText=""
+        setts:item_showDivider="true"
+        setts:item_showNextPage="true"
+        setts:item_showRightImage="false"
+        setts:item_titleText="@string/group_member_sign"
+        />
+</LinearLayout>

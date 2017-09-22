@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include
+        android:id="@+id/contact_layout_search"
+        layout="@layout/base_search_layout"/>
+
+    <include layout="@layout/contact_heard_newfriend"
+        android:id="@+id/contact_heard_newfriend"/>
+    <TextView
+        style="@style/tv_line"/>
+    <include layout="@layout/contact_heard_group"
+        android:visibility="visible"
+        android:id="@+id/contact_heard_group"/>
+    <TextView
+        android:visibility="visible"
+        style="@style/tv_line"/>
+    <include layout="@layout/contact_heard_custom_service"
+        android:visibility="visible"
+        android:id="@+id/contact_heard_custom_service"/>
+
+    <!--<TextView-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:minHeight="@dimen/android_width_40" />-->
+</LinearLayout>

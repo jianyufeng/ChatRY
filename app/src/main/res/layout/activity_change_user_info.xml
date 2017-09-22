@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:sets="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/top_layout"
+            android:background="@color/common_bg"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/change_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/android_width_40"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="true"
+            sets:item_showRightImage="true"
+            sets:item_titleText="@string/avatar_desc"
+            />
+
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/change_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="false"
+            sets:item_showRightImage="false"
+            sets:item_titleText="@string/change_user_name"
+            />
+
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/change_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="false"
+            sets:item_showRightImage="false"
+            sets:item_titleText="@string/change_user_account"
+            />
+
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/change_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            sets:item_RightImage_size="@dimen/android_width_40"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="true"
+            sets:item_showRightImage="true"
+            sets:item_titleText="@string/change_user_qrcode"
+            />
+
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/change_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="true"
+            sets:item_showRightImage="false"
+            sets:item_titleText="@string/change_user_password"/>
+
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/change_sign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="true"
+            sets:item_showRightImage="false"
+            sets:item_titleText="@string/change_user_sign"
+            />
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/exit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="true"
+            sets:item_showRightImage="false"
+            sets:item_titleText="退出"
+            />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--文本的收消息-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ChattingUIContent"
+    android:layout_below="@+id/chatting_time_tv">
+
+    <include layout="@layout/chatting_item_avatar_from" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="center_vertical"
+        >
+        <TextView
+            android:id="@+id/chatting_user_tv"
+            style="@style/ChattingUISenderText"
+            android:layout_gravity="left"
+             android:visibility="visible"
+             />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+            <TextView
+                android:id="@+id/chatting_content_itv"
+                style="@style/ChattingUIText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_from_bg_normal"
+                android:autoLink="all"
+                android:gravity="center"
+                android:linksClickable="false"
+                android:maxWidth="215.0dip"
+                android:minHeight="@dimen/android_width_72"
+                />
+
+            <!--<ImageView-->
+            <!--android:id="@+id/chatting_state_iv"-->
+            <!--style="@style/ChattingUIState"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:visibility="gone"-->
+            <!--/>-->
+
+            <ProgressBar
+                android:id="@+id/uploading_pb"
+                style="@style/smallCustomProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

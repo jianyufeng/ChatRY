@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<android.support.v7.widget.Toolbar
+    android:id="@+id/id_tool_bar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp">
+    <RelativeLayout
+        android:id="@+id/main_top_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_color"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:id="@+id/actionBar_back_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10.0dip">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/android_head_logo"/>
+
+            <TextView
+                android:id="@+id/btn_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="4.0dip"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/app_name"
+                android:textSize="@dimen/android_text_size_18"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_middle_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:drawablePadding="4.0dip"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/actionBar_friends_container"
+            android:layout_width="wrap_content"
+            android:minWidth="40dp"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/actionBar_menu_container"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:id="@+id/btn_friends"
+                    android:layout_width="@dimen/android_width_33"
+                    android:layout_height="@dimen/android_width_33"
+                    android:layout_marginRight="@dimen/android_width_22"
+                    android:scaleType="center"
+                    android:src="@drawable/android_head_friendlist"
+                    android:visibility="visible"
+                    />
+                <TextView
+                    android:id="@+id/newfriend_myunreadtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/laungh_top_friends_button_selecor"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="8sp"
+                    android:layout_marginLeft="21dp"
+                    android:layout_marginTop="7dp"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/actionBar_menu_container"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp">
+
+            <!--<ImageView-->
+                <!--android:id="@+id/btn_plus"-->
+                <!--android:layout_width="@dimen/android_width_33"-->
+                <!--android:layout_height="@dimen/android_width_33"-->
+                <!--android:layout_marginRight="@dimen/android_width_22"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/tabbar_icon_add"-->
+                <!--android:visibility="visible"/>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/actionBar_search_container"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/android_width_33"
+                android:layout_height="@dimen/android_width_33"
+                android:layout_marginRight="@dimen/android_width_22"
+                android:src="@drawable/android_head_search"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>
+</FrameLayout>

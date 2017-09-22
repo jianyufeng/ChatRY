@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--群组设置项的集合  抽取的View 类 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/user_item_selector"
+              android:baselineAligned="false"
+              android:gravity="center_vertical"
+              android:minHeight="49dp"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/android_width_20"
+        android:paddingRight="@dimen/android_width_20">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@android:id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="16sp"
+                tools:text="群组"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_tv_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:maxWidth="@dimen/android_width_250"
+                    tools:text="fdsffdsf"/>
+
+                <ImageView
+                    android:id="@+id/right_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/android_width_10"
+                    android:layout_marginTop="@dimen/android_width_10"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/group_default_icon"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:id="@+id/next_page"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="@dimen/android_width_20"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_back_1"/>
+            </LinearLayout>
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/accessory_checked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/item_bottom_divider"
+        style="@style/tv_line"/>
+
+</LinearLayout>

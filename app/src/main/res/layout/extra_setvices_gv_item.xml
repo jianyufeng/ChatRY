@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:minHeight="@dimen/android_width_86"
+    android:gravity="center_horizontal"
+    android:background="@drawable/user_item_selector"
+    >
+    <TextView
+        style="@style/tv_line"/>
+    <RelativeLayout
+        android:id="@+id/friends_circle_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/android_width_86"
+        android:background="@drawable/user_item_selector">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/android_width_30"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/android_width_46"
+                android:layout_height="@dimen/android_width_46"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/android_width_30"
+                android:gravity="center"
+                android:textSize="@dimen/android_text_size_16" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/android_width_20"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_back_1" />
+    </RelativeLayout>
+    <TextView
+        style="@style/tv_line"/>
+</LinearLayout>

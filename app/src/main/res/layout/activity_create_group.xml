@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/hideSoft"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/android_bg_color"
+                android:focusable="true"
+
+                android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/group_name">
+
+        <com.sanbafule.sharelock.view.AddIconImageView
+            android:id="@+id/add_icon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/group_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:gravity="center"
+        android:hint="@string/create_group_inout_name"
+        android:imeOptions="actionDone"
+        android:maxLength="10"
+        android:padding="@dimen/android_width_10"
+        android:singleLine="true"
+        android:textColorHint="@color/android_edit_text_color"
+        android:textSize="@dimen/android_text_size_16"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/group_name"
+        android:layout_marginLeft="@dimen/android_width_146"
+        android:layout_marginRight="@dimen/android_width_146"
+        android:background="@color/main_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/android_width_60"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <CheckBox
+            android:id="@+id/agree_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_group_rule"
+            android:textSize="@dimen/android_text_size_14"/>
+
+        <TextView
+            android:id="@+id/check_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/android_width_5"
+            android:text="@string/create_group_rule_"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/android_text_size_12"/>
+    </LinearLayout>
+
+</RelativeLayout>

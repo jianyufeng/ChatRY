@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/android_width_18"
+    android:layout_marginRight="@dimen/android_width_18"
+    android:layout_marginTop="@dimen/android_width_18"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/new_conversation"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="创建新聊天" />
+</LinearLayout>

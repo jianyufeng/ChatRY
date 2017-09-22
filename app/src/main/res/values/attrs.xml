@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<declare-styleable name="CircleIndicator">-->
+        <!--<attr name="ci_width" format="dimension"/>-->
+        <!--<attr name="ci_height" format="dimension"/>-->
+        <!--<attr name="ci_margin" format="dimension"/>-->
+        <!--<attr name="ci_animator" format="reference"/>-->
+        <!--<attr name="ci_animator_reverse" format="reference"/>-->
+        <!--<attr name="ci_drawable" format="reference"/>-->
+        <!--<attr name="ci_drawable_unselected" format="reference"/>-->
+
+        <!--<attr name="ci_orientation" format="enum">-->
+            <!--&lt;!&ndash; Defines an horizontal widget. &ndash;&gt;-->
+            <!--<enum name="horizontal" value="0"/>-->
+            <!--&lt;!&ndash; Defines a vertical widget. &ndash;&gt;-->
+            <!--<enum name="vertical" value="1"/>-->
+        <!--</attr>-->
+
+        <!--<attr name="ci_gravity">-->
+            <!--&lt;!&ndash; Push object to the top of its container, not changing its size. &ndash;&gt;-->
+            <!--<flag name="top" value="0x30"/>-->
+            <!--&lt;!&ndash; Push object to the bottom of its container, not changing its size. &ndash;&gt;-->
+            <!--<flag name="bottom" value="0x50"/>-->
+            <!--&lt;!&ndash; Push object to the left of its container, not changing its size. &ndash;&gt;-->
+            <!--<flag name="left" value="0x03"/>-->
+            <!--&lt;!&ndash; Push object to the right of its container, not changing its size. &ndash;&gt;-->
+            <!--<flag name="right" value="0x05"/>-->
+            <!--&lt;!&ndash; Place object in the vertical center of its container, not changing its size. &ndash;&gt;-->
+            <!--<flag name="center_vertical" value="0x10"/>-->
+            <!--&lt;!&ndash; Grow the vertical size of the object if needed so it completely fills its container. &ndash;&gt;-->
+            <!--<flag name="fill_vertical" value="0x70"/>-->
+            <!--&lt;!&ndash; Place object in the horizontal center of its container, not changing its size. &ndash;&gt;-->
+            <!--<flag name="center_horizontal" value="0x01"/>-->
+            <!--&lt;!&ndash; Grow the horizontal size of the object if needed so it completely fills its container. &ndash;&gt;-->
+            <!--<flag name="fill_horizontal" value="0x07"/>-->
+            <!--&lt;!&ndash; Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. &ndash;&gt;-->
+            <!--<flag name="center" value="0x11"/>-->
+            <!--&lt;!&ndash; Grow the horizontal and vertical size of the object if needed so it completely fills its container. &ndash;&gt;-->
+            <!--<flag name="fill" value="0x77"/>-->
+            <!--&lt;!&ndash; Additional option that can be set to have the top and/or bottom edges of-->
+            <!--the child clipped to its container's bounds.-->
+            <!--The clip will be based on the vertical gravity: a top gravity will clip the bottom-->
+            <!--edge, a bottom gravity will clip the top edge, and neither will clip both edges. &ndash;&gt;-->
+            <!--<flag name="clip_vertical" value="0x80"/>-->
+            <!--&lt;!&ndash; Additional option that can be set to have the left and/or right edges of-->
+            <!--the child clipped to its container's bounds.-->
+            <!--The clip will be based on the horizontal gravity: a left gravity will clip the right-->
+            <!--edge, a right gravity will clip the left edge, and neither will clip both edges. &ndash;&gt;-->
+            <!--<flag name="clip_horizontal" value="0x08"/>-->
+            <!--&lt;!&ndash; Push object to the beginning of its container, not changing its size. &ndash;&gt;-->
+            <!--<flag name="start" value="0x00800003"/>-->
+            <!--&lt;!&ndash; Push object to the end of its container, not changing its size. &ndash;&gt;-->
+            <!--<flag name="end" value="0x00800005"/>-->
+        <!--</attr>-->
+
+    <!--</declare-styleable>-->
+
+
+
+
+    <declare-styleable name="Dialog">
+        <attr name="DialogTitleAppearance" format="reference" />
+        <attr name="DialogTitleText" format="reference|string" />
+        <attr name="DialogSpotColor" format="reference|color"/>
+        <attr name="DialogSpotCount" format="integer"/>
+    </declare-styleable>
+
+
+    <!--底部导航菜单的自定义属性-->
+    <declare-styleable name="MainNavigateTabBar">
+        <attr name="navigateTabTextColor" format="color|reference"/>
+        <attr name="navigateTabSelectedTextColor" format="color|reference"/>
+        <attr name="containerId" format="integer|reference"/>
+        <attr name="navigateTabTextSize" format="dimension|reference"/>
+    </declare-styleable>
+
+
+    <attr name="listdivider" format="integer|reference"/>
+
+    <!--自定义头像的自定义属性-->
+    <declare-styleable name="MaskLayout">
+        <attr name="foreground" format="reference" />
+        <attr name="content_margin" format="dimension" />
+        <attr name="content_marginLeft" format="dimension" />
+        <attr name="content_marginRight" format="dimension" />
+        <attr name="content_marginTop" format="dimension" />
+        <attr name="content_marginBottom" format="dimension" />
+    </declare-styleable>
+    <!-- SettingItem 的自定义属性-->
+    <!--<declare-styleable name="setting_info">-->
+        <!--<attr name="item_titleText" format="string" />-->
+        <!--<attr name="item_detailText" format="string" />-->
+        <!--<attr name="item_accessoryType">-->
+            <!--<enum name="none" value="0" />-->
+            <!--<enum name="arrow" value="1" />-->
+            <!--<enum name="switchbutton" value="2" />-->
+            <!--<enum name="radio" value="3" />-->
+        <!--</attr>-->
+        <!--<attr name="item_showDivider" format="boolean" />-->
+    <!--</declare-styleable>-->
+    <!--群组详情的设置View的抽取使用自定义属性-->
+    <declare-styleable name="setting_info">
+        <attr name="item_titleText" format="string" />
+        <attr name="item_rightText" format="string" />
+        <attr name="item_detailText" format="string" /><!--要删环视要加 再看-->
+        <attr name="item_switch_visible" format="boolean"/>
+        <attr name="item_showDivider" format="boolean" />
+        <attr name="item_showNextPage" format="boolean" />
+        <attr name="item_showRightImage" format="boolean" />
+        <attr name="item_RightImage_size" format="dimension" />
+
+    </declare-styleable>
+    <!--群组成员详情的设置图像-->
+    <declare-styleable name="setting_icon">
+        <attr name="item_rightTextString" format="string" />
+        <attr name="item_LevelString" format="string" />
+        <attr name="item_ManagerString" format="string" />
+        <attr name="item_LabelString" format="string" />
+        <attr name="item_thirdString" format="string" />
+        <attr name="item_showLabel" format="boolean" />
+        <attr name="item_showDividerFlag" format="boolean" />
+        <attr name="item_showLevel" format="boolean" />
+        <attr name="item_showManager" format="boolean" />
+        <attr name="item_showNextPageFlag" format="boolean" />
+        <attr name="item_showQrcode" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PtrFrameLayout">
+        <!-- Optional. If you put header and content in xml, you can you these to specify them. -->
+        <attr name="ptr_header" format="reference" />
+        <attr name="ptr_content" format="reference" />
+
+        <!-- the resistance when you are moving the frame -->
+        <attr name="ptr_resistance" format="float" />
+
+        <!-- the ration of the height of the header to trigger refresh -->
+        <attr name="ptr_ratio_of_header_height_to_refresh" format="float" />
+
+        <attr name="ptr_duration_to_close" format="integer" />
+        <attr name="ptr_duration_to_close_header" format="integer" />
+
+        <!-- pull to refresh, otherwise release to refresh, default is release to refresh -->
+        <attr name="ptr_pull_to_fresh" format="boolean" />
+
+        <!-- keep header when refreshing-->
+        <attr name="ptr_keep_header_when_refresh" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PtrClassicHeader">
+        <attr name="ptr_rotate_ani_time" format="integer" />
+    </declare-styleable>
+    <!--圆形进度条-->
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"/>
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"/>
+        <attr name="textIsDisplayable" format="boolean"/>
+        <attr name="style">
+            <enum name="STROKE" value="0"/>
+            <enum name="FILL" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

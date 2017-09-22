@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:orientation="vertical">
+    <!--  -->
+    <RelativeLayout
+        android:id="@+id/recorder_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        android:orientation="horizontal">
+
+        <com.sanbafule.sharelock.chatting.view.MovieRecorderView
+            android:id="@+id/movieRecorderView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:id="@+id/switch_camera"
+            android:layout_width="@dimen/android_width_58"
+            android:layout_height="@dimen/android_width_58"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/android_width_40"
+            android:layout_marginTop="@dimen/android_width_40"
+            android:background="#55ffffff"/>
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/img_play"
+            android:layout_width="@dimen/android_width_58"
+            android:layout_height="@dimen/android_width_58"
+            android:scaleType="centerInside"
+            android:src="@drawable/android_play_movie"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <!--<Button-->
+        <!--android:visibility="gone"-->
+        <!--android:id="@+id/shoot_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:background="@drawable/bg_movie_add_shoot"-->
+        <!--android:text="按住拍"-->
+        <!--android:textColor="#ECEBF1"/>-->
+</RelativeLayout>

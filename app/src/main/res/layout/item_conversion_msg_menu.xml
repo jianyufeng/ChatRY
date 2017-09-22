@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:paddingLeft="@dimen/android_width_14"
+        android:paddingRight="@dimen/android_width_14"
+        android:id="@+id/top"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#C7C7CD"
+        android:gravity="center"
+        android:text="@string/top_conversion"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:visibility="visible"
+        android:paddingLeft="@dimen/android_width_14"
+        android:paddingRight="@dimen/android_width_14"
+        android:id="@+id/read"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#FF9D00"
+        android:gravity="center"
+        android:text="@string/set_read"
+        android:textColor="#FFFFFF"/>
+
+    <TextView
+        android:paddingLeft="@dimen/android_width_14"
+        android:paddingRight="@dimen/android_width_14"
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="#FF3A30"
+        android:gravity="center"
+        android:text="@string/del_conversion"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>
+

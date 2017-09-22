@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/android_width_108"
+    android:background="@drawable/user_item_selector"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/android_width_20"
+    android:paddingRight="@dimen/android_width_20">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/android_width_72"
+        android:layout_height="@dimen/android_width_72"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_touxiang_persion_gray" />
+
+    <TextView
+        android:id="@+id/name"
+        style="@style/Base_TextView_Black"
+        android:layout_alignTop="@+id/icon"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@+id/icon"
+        android:gravity="center|left"
+        android:maxLines="1"
+        android:text="name"
+        android:textSize="@dimen/android_text_size_14"
+
+        />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/icon"
+        android:layout_alignLeft="@+id/name"
+        android:layout_marginBottom="3dp"
+        android:gravity="center|left"
+        android:maxLines="1"
+        android:text="neirong"
+        android:textSize="@dimen/android_text_size_12" />
+
+
+</RelativeLayout>

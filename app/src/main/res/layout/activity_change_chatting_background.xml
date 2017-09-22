@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_activity_background"
+    >
+
+    <TextView
+        android:id="@+id/system_bg"
+       android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="选择背景图"
+        android:background="@color/main_item_background"
+        android:layout_marginTop="20dp"
+        android:padding="@dimen/android_width_18"
+
+        />
+  <View
+      style="@style/tv_line"
+
+      android:layout_marginLeft="@dimen/android_width_18"
+      android:layout_marginRight="@dimen/android_width_18"
+      />
+    <TextView
+        android:id="@+id/photo_bg"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="从相册中选择"
+        android:padding="@dimen/android_width_18"
+        android:background="@color/main_item_background"/>
+    <View
+        style="@style/tv_line"
+        android:layout_marginLeft="@dimen/android_width_18"
+        android:layout_marginRight="@dimen/android_width_18"
+        />
+    <TextView
+        android:id="@+id/camera_bg"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="拍一张"
+        android:padding="@dimen/android_width_18"
+        android:background="@color/main_item_background"/>
+
+
+</LinearLayout>

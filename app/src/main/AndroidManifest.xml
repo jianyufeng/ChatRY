@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.sanbafule.sharelock"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-permission android:name="android.permission.RECORD_VIDEO"/>
+    <!-- 小米 配置开始 < -->
+    <permission
+        android:name="com.sanbafule.sharelock.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.sanbafule.sharelock.permission.MIPUSH_RECEIVE"/> <!-- 小米 配置结束 < -->
+    <application
+        android:name=".SApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- 小米 配置开始 < -->
+        <service
+            android:name="com.xiaomi.push.service.XMPushService"
+            android:enabled="true"/>
+        <service
+            android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
+            android:enabled="true"
+            android:exported="true"/>
+        <service
+            android:name="com.xiaomi.mipush.sdk.MessageHandleService"
+            android:enabled="true"/>
+        <!--注：此service必须在2.2.5版本以后（包括2.2.5版本）加入-->
+
+        <service
+            android:name="com.xiaomi.push.service.XMJobService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <!--注：此service必须在3.0.1版本以后（包括3.0.1版本）加入-->
+
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.xiaomi.push.service.receivers.PingReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="io.rong.push.platform.MiMessageReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+        <!-- 小米 配置结束 < -->
+
+        <!-- imlib config begin -->
+        <meta-data
+            android:name="RONG_CLOUD_APP_KEY"
+            android:value="8brlm7uf8be73"/>
+
+        <service
+            android:name="io.rong.imlib.ipc.RongService"
+            android:exported="true"
+            android:process=":ipc"/>
+        <service
+            android:name="io.rong.imlib.ReConnectService"
+            android:exported="true"/>
+
+        <receiver
+            android:name="io.rong.imlib.ConnectChangeReceiver"
+            android:exported="true"/>
+        <receiver
+            android:name="io.rong.imlib.HeartbeatReceiver"
+            android:process=":ipc"/>
+        <!-- imlib config end -->
+
+
+        <!-- 必选： SDK 核心功能 -->
+        <!-- 第三方相关,向第三方推送服务请求 token 的服务 -->
+        <service
+            android:name="io.rong.push.core.PushRegistrationService"
+            android:exported="false"/>
+
+        <!-- 处理 push 消息相关的服务 -->
+        <service
+            android:name="io.rong.push.core.MessageHandleService"
+            android:exported="true"/>
+
+        <!-- push服务 -->
+        <service
+            android:name="io.rong.push.PushService"
+            android:exported="false"
+            android:process="io.rong.push"> <!-- push进程，可以改名 -->
+        </service>
+
+        <!-- push 相关事件接收器 -->
+        <receiver
+            android:name="io.rong.push.PushReceiver"
+            android:process="io.rong.push"> <!-- 此处进程可以改名，名称需要和PushService所在进程统一 -->
+            <!-- 心跳事件 -->
+            <intent-filter>
+                <action android:name="io.rong.push.intent.action.HEART_BEAT"/>
+            </intent-filter>
+            <!-- 网络变动事件 -->
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- 部分用户事件 -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 必选： SDK 核心功能 -->
+
+
+        <!-- end -->
+        <!-- 注册推送消息 -->
+        <receiver
+            android:name=".chatting.help.NotificationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED"/>
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED"/>
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED"/>
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".util.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".UI.GuideActivity"/>
+        <!-- <activity -->
+        <!-- android:name=".UI.SplashActivity" -->
+        <!-- android:screenOrientation="portrait"> -->
+
+
+        <!-- </activity> -->
+        <activity
+            android:name=".UI.account.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TestActivity"/>
+        <activity android:name=".chatting.activity.ChattingActivity"/>
+        <!-- 相册的Activity -->
+
+        <activity
+            android:name=".UI.SplashActivity"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/AppTheme"/>
+        <activity android:name=".UI.PhotoPickerActivity"/>
+        <activity android:name=".WebActivity"/>
+        <activity
+            android:name=".UI.contact.ContactListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".UI.contact.SearchFriendAndGroupActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".UI.base.BaseSearchActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".UI.contact.ContactInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".UI.contact.NewFriendInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".UI.contact.NewFriendListActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".UI.contact.ImageShowerActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".UI.contact.ContactMoreActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 会话搜素界面 -->
+        <activity
+            android:name=".chatting.activity.ConversationSearchActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 会话搜素的列表展示界面 -->
+        <activity
+            android:name=".chatting.activity.ConversationSearchListActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 会话搜索的消息列表展示页面 -->
+        <activity
+            android:name=".chatting.activity.SearchConversationResultActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 私聊的聊天信息画面 -->
+        <activity
+            android:name=".chatting.activity.PrivateChattingInfoActivity"
+            android:screenOrientation="portrait"></activity>
+        <!-- 系统自带的聊天背景 -->
+        <activity
+            android:name=".chatting.activity.SystemBackgroundChattingActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 更换聊天背景 -->
+        <activity
+            android:name=".chatting.activity.ChangeChattingBackgroundActivity"
+            android:screenOrientation="portrait"/>
+        <!--添加表情的页面-->
+        <activity
+            android:name=".chatting.activity.AddEmoticonsActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--设置表情的页面-->
+        <activity
+            android:name=".chatting.activity.SettingEmoticonsActivity"
+            android:screenOrientation="portrait"/>
+        <!--填写文字-->
+        <activity
+            android:name=".UI.account.EditConfigActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--个性签名的展示-->
+        <activity
+            android:name=".UI.contact.ContactSignActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--联系人的二维码展示-->
+        <activity
+            android:name=".UI.contact.ContactQRCodeActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--搜索本地消息-->
+        <activity
+            android:name=".chatting.activity.SearchMessageActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--显示聊天的大字号-->
+        <activity
+            android:name=".chatting.activity.ShowBigTextActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--用户的个人信息页面-->
+        <activity
+            android:name=".UI.user.UserInfoActivity"
+            android:screenOrientation="portrait"
+            />
+        <!--消息转发页面-->
+        <activity
+            android:name=".chatting.activity.TranspondMessageActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".UI.MyHeaderActivity"/>
+        <activity android:name=".chatting.activity.ImageGralleryPagerActivity"/>
+
+        <!-- 群组相关 -->
+        <!-- 群组列表 -->
+        <activity
+            android:name=".UI.group.GroupListActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 创建群组 -->
+        <activity
+            android:name=".UI.group.CreateGroupActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <!-- 群组详情 -->
+        <activity
+            android:name=".UI.group.GroupDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 修改群组详情 -->
+        <activity
+            android:name=".UI.group.EditGroupInfoActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 修改群组申请权限详情 -->
+        <activity
+            android:name=".UI.group.EditGroupInfoPermissionActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 群成员的详情 -->
+        <activity
+            android:name=".UI.group.GroupMemberDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 设置群成员的权限及禁言 -->
+        <activity
+            android:name=".UI.group.GroupMemberSettingActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 设置群成员的禁言时间 -->
+        <activity
+            android:name=".UI.group.GroupMemberBanActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 选择联系人界面 -->
+        <activity
+            android:name=".UI.contact.ContactListSelectActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 请求加入群组列表界面 -->
+        <activity
+            android:name=".UI.groupNotice.RequestJoinActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 邀请加入群组列表界面 -->
+        <activity
+            android:name=".UI.groupNotice.InviteJoinActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 申请加入群组 -->
+        <activity
+            android:name=".UI.group.ApplyJoinGroupActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 修改个人信息界面 -->
+        <activity
+            android:name=".UI.user.ChangeUserInfoActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 修改个人签名界面 -->
+        <activity
+            android:name=".UI.user.ChangeUserSignActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 重置密码界面 -->
+        <activity
+            android:name=".UI.user.ResetPasswordActivity"
+            android:screenOrientation="portrait"/>
+        <!-- 二维码界面 -->
+        <activity
+            android:name=".UI.user.QRCodeActivity"
+            android:screenOrientation="portrait"/>
+        <!-- //群组聊天界面 -->
+        <activity
+            android:name=".chatting.activity.GroupChattingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            />
+        <!-- //群组通知 -->
+        <activity
+            android:name=".UI.group.GroupNotificationActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".chatting.activity.ShowImageAndFileMessageActivity"/>
+        <activity
+            android:name=".chatting.activity.ShootVideoActivity"
+            android:screenOrientation="portrait"/>
+        <!--在4.0 以后的系统中 原来的android:configChanges=orientation|keyboardHidden 将不会起作用，
+        需要增加screenSize才可以正常的调用重绘函数-->
+        <activity
+            android:name=".chatting.activity.play.PlayVideoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".chatting.activity.AtSomeoneUI"
+            android:screenOrientation="portrait"/>
+
+
+    </application>
+
+</manifest>

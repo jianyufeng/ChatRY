@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/android_bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/android_width_40">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/android_width_380"
+            android:src="@drawable/jieshao"/>
+
+
+        <TextView
+            style="@style/tv_line"
+            android:layout_marginTop="@dimen/android_width_40"/>
+
+        <LinearLayout
+            android:id="@+id/introduceLayout"
+            style="@style/company_layout"
+            android:background="@drawable/user_item_selector"
+            >
+
+            <LinearLayout
+                style="@style/company_layout_contant"
+                >
+
+                <TextView
+                    android:layout_width="@dimen/android_width_30"
+                    android:layout_height="wrap_content"
+                    />
+
+                <ImageView
+                    style="@style/company_layout_img"
+                    android:src="@drawable/com_intro"/>
+
+                <TextView
+                    android:layout_width="@dimen/android_width_30"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    style="@style/company_layout_tv"
+                    android:text="公司介绍"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"/>
+
+                <ImageView
+                    style="@style/company_layout_img_back"
+                    android:src="@drawable/ic_back_1"
+                    />
+
+                <TextView
+                    android:layout_width="@dimen/android_width_20"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView style="@style/tv_line"/>
+
+        <TextView
+            style="@style/tv_line"
+            android:layout_marginTop="@dimen/android_width_40"/>
+
+        <LinearLayout
+            android:id="@+id/cultureLayout"
+            style="@style/company_layout"
+            android:background="@drawable/user_item_selector"
+            >
+
+            <LinearLayout
+                style="@style/company_layout_contant"
+                >
+
+                <TextView
+                    android:layout_width="@dimen/android_width_30"
+                    android:layout_height="wrap_content"
+                    />
+
+                <ImageView
+                    style="@style/company_layout_img"
+                    android:src="@drawable/com_culture"/>
+
+                <TextView
+                    android:layout_width="@dimen/android_width_30"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    style="@style/company_layout_tv"
+                    android:text="公司文化"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"/>
+
+                <ImageView
+                    style="@style/company_layout_img_back"
+                    android:src="@drawable/ic_back_1"
+                    />
+
+                <TextView
+                    style="@style/company_layout_img_back"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView style="@style/tv_line"/>
+
+
+        <TextView
+            style="@style/tv_line"
+            android:layout_marginTop="@dimen/android_width_40"/>
+
+        <LinearLayout
+            android:id="@+id/bigEventsLayout"
+            style="@style/company_layout"
+            android:background="@drawable/user_item_selector"
+            >
+
+
+            <LinearLayout
+                style="@style/company_layout_contant"
+
+                >
+
+                <TextView
+                    android:layout_width="@dimen/android_width_30"
+                    android:layout_height="wrap_content"
+                    />
+
+                <ImageView
+                    style="@style/company_layout_img"
+                    android:src="@drawable/event"/>
+
+                <TextView
+                    android:layout_width="@dimen/android_width_30"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    style="@style/company_layout_tv"
+                    android:text="公司大事记"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"/>
+
+                <ImageView
+                    style="@style/company_layout_img_back"
+                    android:src="@drawable/ic_back_1"
+                    />
+
+                <TextView
+                    android:layout_width="@dimen/android_width_20"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView style="@style/tv_line"/>
+
+        <TextView
+            style="@style/tv_line"
+            android:layout_marginTop="@dimen/android_width_40"/>
+
+        <LinearLayout
+            android:id="@+id/cooperativAgencyLayout"
+            style="@style/company_layout"
+            android:background="@drawable/user_item_selector"
+            >
+
+
+            <LinearLayout
+                style="@style/company_layout_contant"
+
+                >
+
+                <TextView
+                    android:layout_width="@dimen/android_width_30"
+                    android:layout_height="wrap_content"
+                    />
+
+                <ImageView
+                    style="@style/company_layout_img"
+                    android:src="@drawable/teamwork"/>
+
+                <TextView
+                    android:layout_width="@dimen/android_width_30"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    style="@style/company_layout_tv"
+                    android:text="合作机构"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"/>
+
+                <ImageView
+                    style="@style/company_layout_img_back"
+                    android:src="@drawable/ic_back_1"
+                    />
+
+                <TextView
+                    android:layout_width="@dimen/android_width_20"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView style="@style/tv_line"/>
+
+        <TextView
+            style="@style/tv_line"
+            android:layout_marginTop="@dimen/android_width_40"/>
+
+        <LinearLayout
+            android:id="@+id/cooperativeHonorLayout"
+            style="@style/company_layout"
+            android:background="@drawable/user_item_selector"
+            >
+
+
+            <LinearLayout
+                style="@style/company_layout_contant"
+
+                >
+
+                <TextView
+                    android:layout_width="@dimen/android_width_30"
+                    android:layout_height="wrap_content"
+                    />
+
+                <ImageView
+                    style="@style/company_layout_img"
+                    android:src="@drawable/honor"/>
+
+                <TextView
+                    android:layout_width="@dimen/android_width_30"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    style="@style/company_layout_tv"
+                    android:text="公司荣誉"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"/>
+
+                <ImageView
+                    style="@style/company_layout_img_back"
+                    android:src="@drawable/ic_back_1"
+                    />
+
+                <TextView
+                    android:layout_width="@dimen/android_width_20"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView style="@style/tv_line"/>
+    </LinearLayout>
+
+</ScrollView>

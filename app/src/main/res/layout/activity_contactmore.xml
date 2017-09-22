@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:setts="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/android_bg_color">
+
+    <View
+        style="@style/tv_line"
+        android:layout_marginTop="@dimen/android_width_40" />
+
+    <com.sanbafule.sharelock.view.SingleSettingItem
+        android:id="@+id/item_blacklist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        setts:item_showDivider="true"
+        setts:item_showNextPage="false"
+        setts:item_showRightImage="false"
+        setts:item_switch_visible="true"
+        setts:item_titleText="@string/blacklist" />
+
+    <com.sanbafule.sharelock.view.SingleSettingItem
+        android:id="@+id/item_nodisturb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_blacklist"
+        setts:item_showDivider="false"
+        setts:item_showNextPage="false"
+        setts:item_showRightImage="false"
+        setts:item_switch_visible="true"
+        setts:item_titleText="@string/nodisturb" />
+
+    <com.sanbafule.sharelock.view.SingleSettingItem
+        android:id="@+id/item_cleanmessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_nodisturb"
+        android:layout_marginTop="50dp"
+        setts:item_showDivider="true"
+        setts:item_showNextPage="true"
+        setts:item_showRightImage="false"
+        setts:item_titleText="@string/cleanmessage" />
+
+    <Button
+        android:id="@+id/more_bt_dele_friend"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/android_width_88"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="@dimen/android_width_40"
+        android:layout_marginRight="@dimen/android_width_40"
+        android:background="@drawable/btn_style_delete_select"
+        android:text="删除好友"
+        android:textColor="@color/white"
+        android:textSize="@dimen/android_text_size_16" />
+
+</RelativeLayout>

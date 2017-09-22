@@ -1,0 +1,1 @@
+include ':app', ':reclib-testemoticons', 'reclib-qq', ':InitActivity'

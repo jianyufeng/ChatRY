@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--聊天的头像-->
+<com.sanbafule.sharelock.chatting.view.CCPMaskLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chatting_avatar_mask"
+    style="@style/ChattingUIAvatarMaskTo"
+    android:focusable="false" >
+
+    <ImageView
+        android:id="@+id/chatting_avatar_iv"
+        style="@style/ChattingUIAvatar"
+        android:contentDescription="@string/avatar_desc"
+        android:layout_centerHorizontal="true"
+        android:focusable="false" />
+
+
+</com.sanbafule.sharelock.chatting.view.CCPMaskLayout>

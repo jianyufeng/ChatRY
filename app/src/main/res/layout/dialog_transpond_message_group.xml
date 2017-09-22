@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        style="@style/Base_TextView_Black"
+        android:text="分别发送给:"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_title"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/imagecontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/textcontent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/gray01"
+            android:padding="10dp"
+            android:text=""
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content"
+        android:padding="3dp"
+        android:layout_marginTop="10dp"
+        android:background="@null" />
+
+    <View
+        style="@style/tv_line"
+        android:layout_below="@+id/edit_text"
+        android:background="@color/main_color" />
+
+
+</RelativeLayout>

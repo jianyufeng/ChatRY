@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--图片的发送消息-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ChattingUIContent" >
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" />
+
+    <LinearLayout
+        android:gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/chatting_user_tv"
+            style="@style/ChattingUISenderText"
+            android:layout_gravity="right"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/chatting_state_iv"
+                style="@style/ChattingUIState"
+                android:layout_gravity="center_vertical"
+         />
+            <FrameLayout
+                android:id="@+id/chatting_click_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 >
+                <ImageView
+                    android:src="@color/__picker_black_40"
+                    android:id="@+id/chatting_content_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/searchshape"
+                    android:maxWidth="200.0dip"
+                    android:maxHeight="230.0dip"/>
+                <ImageView
+                    android:id="@+id/img_gif"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_play_gif"
+                    android:maxWidth="200.0dip"
+                    android:maxHeight="230.0dip"
+                    android:visibility="gone"
+                    />
+                <LinearLayout
+                    android:id="@+id/uploading_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@color/gray04"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                    <ProgressBar
+                        android:id="@+id/uploading_pb"
+                        style="@style/smallCustomProgressBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                    />
+
+                    <TextView
+                        android:id="@+id/uploading_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffffff" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/chatting_item_avatar_to" />
+
+</LinearLayout>

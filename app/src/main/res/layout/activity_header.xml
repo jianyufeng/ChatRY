@@ -1,0 +1,28 @@
+<com.sanbafule.sharelock.view.MyKeyBoard xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <com.sanbafule.sharelock.view.header.PtrFrameLayout
+        android:id="@+id/rotate_header_list_view_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f00"
+        cube_ptr:ptr_duration_to_close="200"
+        cube_ptr:ptr_duration_to_close_header="1000"
+        cube_ptr:ptr_keep_header_when_refresh="true"
+        cube_ptr:ptr_pull_to_fresh="false"
+        cube_ptr:ptr_ratio_of_header_height_to_refresh="3"
+        cube_ptr:ptr_resistance="3" >
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ccc" />
+        
+    </com.sanbafule.sharelock.view.header.PtrFrameLayout>
+
+</com.sanbafule.sharelock.view.MyKeyBoard>

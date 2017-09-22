@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/android_width_86"
+        android:orientation="horizontal">
+        <CheckBox
+            android:layout_marginLeft="@dimen/android_width_20"
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginLeft="@dimen/android_width_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ban_time"
+            tools:text="fdsffdsf"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="@dimen/android_width_20"
+        style="@style/tv_line"/>
+
+</LinearLayout>

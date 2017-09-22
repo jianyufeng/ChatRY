@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--群组请求加入列表界面   -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+    <com.sanbafule.sharelock.view.customRecycleView.ExpandRecyclerView
+        android:id="@+id/recycle_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="true"
+        />
+
+    <include
+        layout="@layout/recycle_view_empty_view"/>
+
+</RelativeLayout>

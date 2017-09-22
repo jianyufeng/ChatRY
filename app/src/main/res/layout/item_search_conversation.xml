@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:paddingLeft="6dp">
+
+    <ImageView
+        android:id="@+id/conversion_img"
+        style="@style/Heard_Iv"
+        android:layout_margin="@dimen/android_width_18"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/conversion_name"
+        style="@style/Base_TextView_Black"
+        android:layout_alignTop="@+id/conversion_img"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/conversion_img"
+        android:maxLines="1"
+        android:textSize="@dimen/android_text_size_18" />
+
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_alignLeft="@+id/conversion_name"
+     android:layout_below="@+id/conversion_name"
+     android:layout_marginLeft="5dp"
+     android:layout_marginTop="5dp"
+     android:orientation="horizontal"
+     >
+    <TextView
+        android:id="@+id/conversion_groupMember"
+        style="@style/Base_TextView"
+       android:visibility="gone"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/conversion_body"
+        style="@style/Base_TextView"
+        android:maxLines="1"
+   />
+ </LinearLayout>
+    <View
+        style="@style/tv_line"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/android_width_18"
+        android:layout_marginRight="@dimen/android_width_18" />
+
+</RelativeLayout>

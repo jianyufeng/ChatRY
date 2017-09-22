@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/android_bg_color"
+    android:minHeight="@dimen/android_width_86"
+    android:orientation="horizontal"
+    android:id="@+id/searchLayout"
+    android:paddingBottom="@dimen/android_width_15"
+    android:paddingLeft="@dimen/android_width_20"
+    android:paddingRight="@dimen/android_width_20"
+    android:paddingTop="@dimen/android_width_15">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/user_item_selector"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/android_width_30"
+                android:layout_height="@dimen/android_width_30"
+                android:scaleType="centerInside"
+                android:src="@drawable/android_search" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:text="搜索"
+                android:textColor="@color/android_edit_text_color"
+                android:textSize="@dimen/android_text_size_14" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

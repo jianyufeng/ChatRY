@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sanbafule.sharelock.view.InterceptScrollview
+    android:id="@+id/top_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:sets="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_bg">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <com.sanbafule.sharelock.view.customRecycleView.ExpandRecyclerView
+            android:id="@+id/group_members"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/android_width_20"
+            android:layout_marginTop="@dimen/android_width_20"
+            android:overScrollMode="never"
+            />
+
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/group_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="false"
+            sets:item_showRightImage="true"
+            sets:item_titleText="@string/group_icon"
+            />
+
+
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/group_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="false"
+            sets:item_showRightImage="false"
+            sets:item_titleText="@string/group_name"
+            />
+
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/group_qrcode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            sets:item_RightImage_size="@dimen/android_width_40"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="true"
+            sets:item_showRightImage="true"
+            sets:item_titleText="@string/group_qrcode"
+            />
+
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/group_member_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="false"
+            sets:item_showRightImage="false"
+            sets:item_titleText="@string/group_member_count"
+            />
+
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/group_declare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="false"
+            sets:item_showRightImage="false"
+            sets:item_titleText="@string/group_declare"
+            />
+
+        <com.sanbafule.sharelock.view.SingleSettingItem
+            android:id="@+id/group_create_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            sets:item_showDivider="true"
+            sets:item_showNextPage="false"
+            sets:item_showRightImage="false"
+            sets:item_titleText="@string/group_create_time"
+            />
+
+        <Button
+            android:id="@+id/group_apply_btn"
+            style="@style/common_btn"
+            android:layout_marginTop="@dimen/android_width_40"
+            android:background="@drawable/btn_style_red_select"
+            android:text="@string/apply_join_group"
+            />
+    </LinearLayout>
+
+
+</com.sanbafule.sharelock.view.InterceptScrollview>

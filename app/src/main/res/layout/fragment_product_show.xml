@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:orientation="vertical">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_and_load_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/android_width_30"
+                android:layout_weight="3"
+                android:background="@color/android_bg_color"
+                >
+
+                <ListView
+                    android:id="@+id/product_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="@color/android_divider_color"
+                    android:dividerHeight="2px"
+                    android:scrollbars="none"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/product_list_contant"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/android_width_40"
+                android:layout_marginTop="@dimen/android_width_20"
+                android:layout_weight="7"
+                >
+            </FrameLayout>
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <!--       style="@style/CCPFontEmptyMsgLarge"   android:text="@string/pull_to_refresh_tap_label"-->
+    <TextView
+        android:id="@+id/empty_conversation_tv"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:singleLine="false"
+        android:lineSpacingMultiplier="1.5"
+
+        android:visibility="gone" />
+</FrameLayout>
